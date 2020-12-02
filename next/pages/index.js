@@ -1,10 +1,20 @@
-import styled from 'styled-components'
+import client from '../client';
+import PhotoGallery from '../components/PhotoGallery';
+import VideoGallery from '../components/VideoGallery';
 
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
-`
+const Index = ({ photos, videos }) => {
+  return (
+    <div>
+      <h1>hello</h1>
+      <PhotoGallery photos={photos} />
+      <VideoGallery videos={videos} />
+    </div>
+  );
+};
 
-export default function Home() {
-  return <Title>My page</Title>
-}
+Index.getInitialProps = async () => ({
+  photos: await client.fetch(`*[_type == "photo"]`),
+  videos: await client.fetch(`*[_type == "video"]`),
+});
+
+export default Index;
