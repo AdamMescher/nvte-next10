@@ -1,22 +1,10 @@
 export default {
-  name: 'video',
   title: 'Video',
+  name: 'video',
   type: 'document',
   fields: [
-    {
-      name: 'video',
-      title: 'Video',
-      type: 'file',
-    },
-    {
-      name: 'title',
-      title: 'Title',
-      type: 'string',
-    },
-    {
-      name: 'description',
-      title: 'Description',
-      type: 'string',
-    },
+    { title: 'Title', name: 'title', type: 'string' },
+    { title: 'Description', name: 'description', type: 'string' },
+    { title: 'Video URL', name: 'videoURL', type: 'string' },
   ],
 };

@@ -18,8 +18,7 @@ const PhotoGallery = ({ photos }) => {
             key={uuidv4()}
             src={`${'' || urlFor(photo.image)}`}
             alt={photo.altText}
-            width={500}
-            height={500}
+            layout="fill"
           />
         );
       })}

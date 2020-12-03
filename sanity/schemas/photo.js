@@ -1,6 +1,6 @@
 export default {
-  name: 'staticImage',
-  title: 'Image',
+  name: 'photo',
+  title: 'Photo',
   type: 'document',
   fields: [
     {
